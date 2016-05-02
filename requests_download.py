@@ -18,7 +18,7 @@ Usage example::
 
 import requests
 
-__version__ = '0.1'
+__version__ = '0.1.1'
 
 class TrackerBase(object):
     def on_start(self, response):
@@ -76,7 +76,7 @@ def download(url, target, headers=None, trackers=()):
     r = requests.get(url, headers=headers, stream=True)
     r.raise_for_status()
     for t in trackers:
-        t.on_start()
+        t.on_start(r)
 
 
     with open(target, 'wb') as f:
