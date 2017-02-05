@@ -3,11 +3,12 @@
 Usage example::
 
     import hashlib
+    # progressbar is provided by progressbar2 on PYPI.
     from progressbar import DataTransferBar
     from requests_download import download, HashTracker, ProgressTracker
 
     hasher = HashTracker(hashlib.sha256())
-    progress = ProgressTracker(DataTransferBar()
+    progress = ProgressTracker(DataTransferBar())
 
     download('https://github.com/takluyver/requests_download/archive/master.zip',
              'requests_download.zip', trackers=(hasher, progress))
