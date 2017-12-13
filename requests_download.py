@@ -19,7 +19,7 @@ Usage example::
 
 import requests
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 class TrackerBase(object):
     def on_start(self, response):
