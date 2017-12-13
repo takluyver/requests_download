@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "requests_download"
+author = "Thomas Kluyver"
+author-email = "thomas@kluyver.me.uk"
+home-page = "https://www.github.com/takluyver/requests_download"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires = ["requests"]
+
