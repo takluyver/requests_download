@@ -1,13 +1,13 @@
 [build-system]
-requires = ["flit_core  >=2,<4"]
+requires = ["flit_core  >=3,<5"]
 build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module = "requests_download"
-author = "Thomas Kluyver"
-author-email = "thomas@kluyver.me.uk"
-home-page = "https://www.github.com/takluyver/requests_download"
-description-file = "README.rst"
+[project]
+name = "requests_download"
+dynamic = ["version", "description"]
+authors = [{ name = "Thomas Kluyver", email = "thomas@kluyver.me.uk" }]
+urls.Homepage = "https://www.github.com/takluyver/requests_download"
+readme = "README.rst"
 classifiers = ["License :: OSI Approved :: MIT License"]
-requires = ["requests"]
+dependencies = ["requests"]
 
